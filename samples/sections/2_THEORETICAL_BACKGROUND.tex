@@ -1,0 +1,93 @@
+\section{Blockchain} \label{sec:Theoretical}
+
+%\subsubsubsection
+
+%\input{chapters/2_THEORETICAL_BACKGROUND/sections/1_blockchain.tex}
+%\input{chapters/2_THEORETICAL_BACKGROUND/sections/2_fundamentalsOfBlockchain.tex}
+%\input{chapters/2_THEORETICAL_BACKGROUND/sections/4_smartContracts.tex} 
+%\input{chapters/2_THEORETICAL_BACKGROUND/sections/5_traceability.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While the system of financial institutions that serve as third parties reliable processors for processing payments work well for most still suffers from the shortcomings inherent in the model based on confidence. In addition, the cost of mediation increases transaction costs, which limits the practical minimum size of the transaction and eliminates the possibility of small occasional transactions. To solve these problems, \cite{nakamoto2008bitcoin} defined an electronic payment system called Bitcoin, based on cryptographic proof rather than reliable, allowing either party willing to transact directly with each other without the need to a reliable third party. 
+
+Blockchain can be considered as a public ledger, in which all committed transactions are stored in a block chain \cite{zheng2016blockchain}. For \cite{swan2015blockchain}, besides the currency ( "Blockchain 1.0"), smart contracts ("2.0") demonstrate how the Blockchain is in a position to become the fifth disruptive computing paradigm after mainframes, PCs, Internet and mobile/ social networks. Smart contracts mediate registering in public ledger through an application executed in Blockchain itself.
+
+Blockchain technology has critical features, such as decentralization, persistence, anonymity and auditability. Blockchain can function in a decentralized environment that is activated by the integration of several key technologies such as cryptographic hash, digital signature and distributed consensus engine, significantly save the cost and improve efficiency \cite{zheng2016blockchain}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsubsection{Cryptography}\label{sec:criptografia}
+%Blockchain relies heavily on encryption to satisfy system and application security requirements. As the word suggests, cryptocurrencies also make heavy use of encryption. Encryption provides a mechanism for safely encoding the rules of a system encryption on the system itself. This can be used to prevent tampering and misconceptions. So, before be able to understand blockchains correctly, it is necessary to understand the cryptographic foundations \cite{narayanan2016bitcoin}. Cryptography is a deep academic field of research that uses many advanced mathematical techniques that are notoriously subtle and complicated \cite{narayanan2016bitcoin}.
+
+%\subsubsubsection{Cryptographic Hashes}\label{sec:hashesCriptograficos}
+%Hash is a mathematical function that converts any form of data into a unique string of text with the three properties to be follow \cite{narayanan2016bitcoin}:
+
+%\begin{itemize}
+%\item  Its input can be any string of any length;
+%\item Produces a fixed size output (eg., 256 digits);
+%\item It is efficiently computable. Technically, hashing a n-bit string must have a $O(n)$ runtime.
+%\end{itemize}
+
+%These properties define a general hash function. Cryptographic hash functions are unidirectional and hardly allow retrieving the original value $x$ from the hash $h$. For a hash function to be cryptographically safe, it must satisfy the following three properties: (1) collision resistance, (2) hiding and (3) puzzle friendliness \cite{greve2018blockchain}.
+
+%A collision occurs when two distinct inputs produce the same output. A hash function $H$ is collision resistant when it is impossible to find two values $x$ and $y$ such that $x \neq y$ and $H(x) = H(y)$ \cite{narayanan2016bitcoin}.
+
+%The hide property states that, having the hash function output $y = H (x)$, there is no possible way to find out which was the $x$ input \cite{greve2018blockchain}.
+
+%A hash function $H$ is considered puzzle friendliness if for each possible output value of $n$ bits $y$ if $k$ is chosen from a distribution with high min-entropy, then it is impracticable to find $x$ such that $H (k \| x) = y$ in time significantly less than $2^n$ \cite{narayanan2016bitcoin}.
+
+%\subsubsubsection{Digital Signatures}\label{sec:assinaturasDigitais}
+%A digital signature is supposed to be a digital analog of a handwritten paper signature. Two signature properties are desired which correspond well to the analogy of the handwritten signature: first, only one person can make their own signature, but anyone can verify if it is valid. Secondly, it is desired that the signature must be linked to a specific document, so the signature cannot be used to indicate the agreement or endorsement to a different document \cite{merkle1989certified}. Moreover, it is not possible to forge a signature in such a way as to reuse it in some other context. That is, signatures must be irrefutable.
+
+%To implement digital signatures, asymmetric key encryption is used. A secret key (sk) is used for signing the document and a public key (pk) is used to attest the signature's authenticity. A digital signature consists of the following algorithms \cite{greve2018blockchain}:
+
+%\begin{itemize}
+%\item $(sk , pk) := generateKeys(keysize)$ – The $generateKeys()$ method receives a key size $(keysize)$ in the input and return a pair of public $(pk)$ and private $(sk)$ keys.
+%\item $sig := sign(sk , msg)$ – The method $sign()$ receives a message $msg$ and a secret key $(sk)$ on entry and returns the signature $sig$ f that message under $sk$.
+%\item $isValid := veri f y(pk , msg , sig)$ – The method $verify$ receives a public key $(pk)$, a message $msg$ and a signature $(sig)$ as input, and returns a boolean value: $isValid = true$ if $sig$ is a signature valid for $msg$ under $pk$; $isValid = false$, otherwise.
+%\end{itemize}
+
+%The following two properties must be maintained:
+
+%\begin{itemize}
+%\item Authenticity: Signatures can be validated: \\ $verify(pk, message, sign(sk, message)) = = true$.
+%\item Signatures are existentially unfalsifiable: signature cannot be forged.
+%\end{itemize}
+
+%It is noted that \textit{generateKeys()} and \textit{sign()} can be random algorithms. In fact, generating keys should be randomized, because it should be generating different keys for different people. On the other hand, \textit{verify()} will always be deterministic \cite{greve2018blockchain}.
+
+%\subsubsection{Consensus}\label{sec:consenso}
+%The key to blockchain operation is that the network must agree collectively on the ledger's content. Instead of a central entity maintain control over information (such as a bank for example), the data is shared among all. This requires the network to maintain the consensus around the information recorded in the block chain. How this consensus is reached, affects the security and economic parameters of the protocol \cite{kostarev2017review}.
+
+%Reaching consensus is a challenge for blockchain, because its network is distributed and there is no central node that ensures that ledgers on distributed nodes be all the same. Nodes do not need to trust other nodes. Thus, protocols are required to ensure that ledgers on different nodes are consistent \cite{kostarev2017review}. A good consensus algorithm means efficiency, security and convenience. Current common consensus algorithms still have many shortcomings. New consensus algorithms are created to solve some blockchain-specific problems \cite{zheng2016blockchain}.
+
+%\subsubsection{Distributed Ledger}\label{sec:livro}
+%Distributed ledger is a data structure distributed by several nodes or computing devices. Each node replicates and saves a identical ledger copy. Each participating node in the network updates independently \cite{greve2018blockchain}.
+
+%At the simplest level, a blockchain immutably records transactions which update states in a ledger. A smart contract programmatically accesses two distinct pieces of the ledger – a blockchain, which immutably records the history of all transactions, and a world state that holds a cache of the current value of these states, as it’s the current value of an object that is usually required \cite{zheng2016blockchain}.
+
+%\subsubsubsection{Transactions}\label{sec:transac}
+%Blockchain is a public digital book that records online transactions. The blockchain algorithm automatically graphs and authenticates the transaction, which is immediately visible to all users, minimizing the possibility of fraud \cite{Bankrate2018}.
+
+%From a technical standpoint, the most fundamental definition of a transaction is an atomic event allowed by the underlying protocol. A transaction determines a sequence of state operations. It adds a transfer of asset or, generally speaking, a smart contract. In a basic case, the transaction girds a digital signature of the issuer holding the asset and the receiver's address, as well as inputs and outputs for transaction. Entries indicate the previous transaction hash which is related to the current one \cite{greve2018blockchain}.
+
+%\subsubsubsection{Blocks}\label{sec:blocks}
+%Blocks contains a header with information needed for current maintenance and its validation. A block consists of the block header and block body. The body's block consists of a transaction counter and transaction. The maximum number of transactions a block can hold depends on block size and the size of each transaction %\cite{zheng2016blockchain}.
+
+%Validate a block consists in verifying (i) if its structure is well formed (ii) its hash is valid (meets the challenge), (iii) its size is within the network accepted limit, (iv) the set of transactions within the block is valid, (v) the first transaction (and only the first) is the coinbase transaction. The blocks are validated independently, by each node of the blockchain network, and this feature contributes to the process decentralization \cite{greve2018blockchain}.
+
+\subsection{Public Blockchain Versus Private Blockchain}\label{sec:versus}
+On a public blockchain, any person can participate without a specific identity. Public blockchains typically involve a native cryptocurrency and often use proof-of-work (PoW) consensus and economic incentives \cite{androulaki2018hyperledger}. Public blockchain can be audited by anyone, and each node has as much transmission power as any other. For a transaction to be considered valid, it must be authorized by all nodes constituents via the consensus process. As long as each node meets protocol-specific stipulations, their transactions can be validated and thus added to the chain \cite{greve2018blockchain}.
+
+Private blockchains, on the other hand, perform a blockchain between a set of known and identified participants. A private blockchain provides a way to protect the interactions between a group of entities that have a common goal but that don't totally trust each other, like companies that trade funds, assets or information. Relying on peer identities, one private blockchain may use the traditional consensus of Byzantine fault tolerance (BFT) \cite{androulaki2018hyperledger}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Smart Contracts}\label{sec:smartContracts}
+A smart contract is a computerized transaction protocol that executes the terms of a contract \cite{szabo1997idea}. The term smart contract (SC) means: “an internal transaction protocol format that executes the terms of a contract. Their overall goals are ensure common contractual conditions, minimize malicious and accidental exceptions and the need for reliable intermediaries. Related economic objectives include reducing fraud losses, arbitration and execution costs, and other transaction costs.” \cite{szabo1997idea}.
+
+Smart contracts are created as scripts, stored in with exclusive addressing on the Blockchain itself. They are triggered when addressing a transaction to it. Then the script is executed independently and automatically, as prescribed in all nodes in the network according to the data included in the transaction \cite{greve2018blockchain}. Smart contracts interpret the code objectively - "The Code is the law".
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
